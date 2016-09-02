@@ -26,6 +26,8 @@
         var self = this;
         var xStart = 0;
         var yStart = 0;
+        var xEnd = 0;
+        var yEnd = 0;
 
         // define a custom fillCircle method
         ctx.fillCircle = function(x, y, radius, fillColor) {
@@ -56,8 +58,8 @@
             //var radius = 4; // or whatever
             ctx.strokeStyle = '#ff0000';
             ctx.fillStyle = '#ddd';
-            ctx.fillRect(xStart, yStart, x - xStart, y - yStart);
-            ctx.strokeRect(xStart   , yStart, x - xStart, y - yStart)
+            //ctx.fillRect(0, 0, 1000, 1000);
+            //ctx.strokeRect(xStart   , yStart, x - xStart, y - yStart);
         };
         canvas.node.onmousedown = function(e) {
             canvas.isDrawing = true;
@@ -66,6 +68,9 @@
         };
         canvas.node.onmouseup = function(e) {
             canvas.isDrawing = false;
+            xEnd = e.pageX - 300;
+            yEnd = e.pageY - 74;
+            ctx.strokeRect(xStart, yStart, xEnd - xStart, yEnd - yStart);
         };
     }
 
