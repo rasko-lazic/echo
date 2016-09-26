@@ -21,9 +21,18 @@
 
 import Vue from 'vue';
 
-var app = new Vue({
+import app from './app.vue';
+
+//Vue.component('test', app);
+//
+//new Vue({
+//    el: '#app',
+//});
+
+new Vue({
     el: '#app',
+
     data: {
-        message: 'Hello Vue!'
+        message: 'Hello world!!!'
     }
-});
+})

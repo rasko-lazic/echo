@@ -1,7 +1,18 @@
-const elixir = require('laravel-elixir');
+var elixir = require('laravel-elixir');
 
-require('laravel-elixir-vueify');
+require('laravel-elixir-browserify-official');
 
+elixir.config.js.browserify.transformers.push({
+    name: 'vueify',
+    options: {}
+});
+
+elixir.config.js.browserify.transformers.push({
+    name: 'aliasify',
+    options: {}
+});
+
+console.log(elixir.config.js.browserify);
 
 /*
  |--------------------------------------------------------------------------
