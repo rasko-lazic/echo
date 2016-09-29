@@ -6,7 +6,9 @@
                     <div class="panel-heading">Example Component</div>
 
                     <div class="panel-body">
-                        I'm an example component!
+                        <span class="caption">
+                            I'm an example component!
+                        </span>
                     </div>
                 </div>
             </div>
@@ -21,3 +23,11 @@
         }
     }
 </script>
+
+<style>
+
+    .caption {
+        color: red;
+    }
+
+</style>

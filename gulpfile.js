@@ -1,18 +1,6 @@
 var elixir = require('laravel-elixir');
 
-require('laravel-elixir-browserify-official');
-
-elixir.config.js.browserify.transformers.push({
-    name: 'vueify',
-    options: {}
-});
-
-elixir.config.js.browserify.transformers.push({
-    name: 'aliasify',
-    options: {}
-});
-
-console.log(elixir.config.js.browserify);
+require('laravel-elixir-vue-2');
 
 /*
  |--------------------------------------------------------------------------
@@ -26,5 +14,5 @@ console.log(elixir.config.js.browserify);
  */
 
 elixir(mix => {
-    mix.browserify('app.js', 'public/js/app.js');
+    mix.webpack('app.js', 'public/js/app.js');
 });

@@ -13,26 +13,15 @@
  * the application, or feel free to tweak this setup for your needs.
  */
 
-// Vue.component('example', require('./components/Example.vue'));
-//
-// const app = new Vue({
-//     el: 'body'
-// });
-
 import Vue from 'vue';
-
-import app from './app.vue';
-
-//Vue.component('test', app);
-//
-//new Vue({
-//    el: '#app',
-//});
+import example from './components/Example.vue';
+import notification from './components/Notification.vue';
 
 new Vue({
     el: '#app',
 
-    data: {
-        message: 'Hello world!!!'
+    components: {
+        example,
+        notification
     }
-})
+});
