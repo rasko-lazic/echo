@@ -12,16 +12,32 @@
  * the body of the page. From here, you may begin adding components to
  * the application, or feel free to tweak this setup for your needs.
  */
+ window.$ = window.jQuery = require('jquery');
+ require('bootstrap-sass');
 
 import Vue from 'vue';
-import example from './components/Example.vue';
-import notification from './components/Notification.vue';
+import VueResource from 'vue-resource';
+
+Vue.use(VueResource);
+
+Vue.http.headers.common['X-CSRF-TOKEN'] = Laravel.csrfToken;
+
+import * as example from './components/Example.vue';
+import * as picker from './components/Picker.vue';
+import * as notification from './components/Notification.vue';
+import * as clients from './components/passport/Clients.vue';
+import * as auth from './components/passport/AuthorizedClients.vue';
+import * as personal from './components/passport/PersonalAccessTokens.vue';
 
 new Vue({
     el: '#app',
 
     components: {
         example,
-        notification
+        notification,
+        picker,
+        clients,
+        auth,
+        personal
     }
 });

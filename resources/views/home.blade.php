@@ -9,7 +9,10 @@
                 <div class="panel-heading text-center">Notifications</div>
 
                 <div class="panel-body">
-                    <notification></notification>
+                    {{--<clients></clients>--}}
+                    {{--<auth></auth>--}}
+                    {{--<personal></personal>--}}
+                    <picker></picker>
                 </div>
 
             </div>
