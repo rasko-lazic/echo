@@ -17,4 +17,11 @@ class UserController extends Controller
         return $token;
     }
 
+    public function developers()
+    {
+        $devs[] = User::findOrFail(1);
+        $devs[] = User::findOrFail(1);
+
+        return $devs;
+    }
 }

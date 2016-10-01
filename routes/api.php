@@ -18,3 +18,4 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:api');
 
 Route::get('/token/{id}', 'UserController@token');
+Route::get('/devs', 'UserController@developers');

@@ -20,14 +20,18 @@ import VueResource from 'vue-resource';
 
 Vue.use(VueResource);
 
+import Echo from "laravel-echo"
+
+window.Echo = new Echo({
+    broadcaster: 'pusher',
+    key: 'e58a702907296a5f2ebb'
+});
+
 Vue.http.headers.common['X-CSRF-TOKEN'] = Laravel.csrfToken;
 
 import * as example from './components/Example.vue';
 import * as picker from './components/Picker.vue';
 import * as notification from './components/Notification.vue';
-import * as clients from './components/passport/Clients.vue';
-import * as auth from './components/passport/AuthorizedClients.vue';
-import * as personal from './components/passport/PersonalAccessTokens.vue';
 
 new Vue({
     el: '#app',
@@ -35,9 +39,6 @@ new Vue({
     components: {
         example,
         notification,
-        picker,
-        clients,
-        auth,
-        personal
+        picker
     }
 });

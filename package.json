@@ -8,10 +8,12 @@
     "bootstrap-sass": "^3.3.7",
     "gulp": "^3.9.1",
     "jquery": "^3.1.0",
+    "laravel-echo": "^1.0.5",
     "laravel-elixir": "^6.0.0-9",
     "laravel-elixir-vue-2": "^0.2.0",
     "laravel-elixir-webpack-official": "^1.0.2",
     "vue": "^2.0.0-rc.8",
+    "vue-resource": "^1.0.3",
     "vuex": "^2.0.0-rc.6"
   }
 }
